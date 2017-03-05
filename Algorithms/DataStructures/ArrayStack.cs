@@ -39,6 +39,13 @@ namespace Algorithms.DataStructures
             _stack[_current - 1] = default(T);
             _current--;
 
+
+            // if array is almost empty shrink it
+            if (_current > 0 && _current >= (_stack.LongLength / 4))
+            {
+                Shrink();
+            }
+
             // return the previous saved item
             return returnItem;
         }
@@ -58,6 +65,18 @@ namespace Algorithms.DataStructures
             T[] newStack = new T[2 * this._stack.Length];
 
             for (int i = 0; i < _stack.Length; i++)
+            {
+                newStack[i] = _stack[i];
+            }
+
+            this._stack = newStack;
+        }
+
+        private void Shrink()
+        {
+            T[] newStack = new T[this._stack.Length / 2];
+
+            for (int i = 0; i < newStack.Length; i++)
             {
                 newStack[i] = _stack[i];
             }
