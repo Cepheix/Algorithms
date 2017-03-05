@@ -42,7 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\ArrayExtension.cs" />
+    <Compile Include="Algorithms\Others.cs" />
+    <Compile Include="DataStructures\ArrayStack.cs" />
+    <Compile Include="DataStructures\IQueue.cs" />
+    <Compile Include="DataStructures\IStack.cs" />
+    <Compile Include="DataStructures\Queue.cs" />
     <Compile Include="DataStructures\QuickUnion.cs" />
+    <Compile Include="DataStructures\PointerStack.cs" />
     <Compile Include="DataStructures\UnionFind.cs" />
     <Compile Include="DataStructures\WeightedQuickUnion.cs" />
     <Compile Include="Program.cs" />
