@@ -8,5 +8,9 @@ namespace Algorithms.DataStructures
 {
     public interface IQueue<T>
     {
+        void Enque(T item);
+        T Deque();
+        bool IsEmpty();
+        int Size();
     }
 }
