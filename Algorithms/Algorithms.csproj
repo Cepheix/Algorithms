@@ -49,6 +49,7 @@
     <Compile Include="DataStructures\IQueue.cs" />
     <Compile Include="DataStructures\IStack.cs" />
     <Compile Include="DataStructures\PointerQueue.cs" />
+    <Compile Include="DataStructures\MaxPriorityQueue.cs" />
     <Compile Include="DataStructures\QuickUnion.cs" />
     <Compile Include="DataStructures\PointerStack.cs" />
     <Compile Include="DataStructures\UnionFind.cs" />
