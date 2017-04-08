@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithms.DataStructures;
+using System;
 using System.Collections.Generic;
 
 namespace Algorithms.Algorithms
@@ -102,6 +103,17 @@ namespace Algorithms.Algorithms
 
             // posortuj tablicę
             QuickSort(collection, 0, collection.Count - 1);
+        }
+
+        /// <summary>
+        /// Sortowanie kopcowe
+        /// Wykorzystuje MaxPriorityQueue (implementowany za pomocą drzewa binarnego - kopca)
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        public static void HeapSort<T>(IList<T> collection) where T : IComparable<T>
+        {
+            MaxPriorityQueue<T>.HeapSort(collection);
         }
 
         public static bool IsSorted<T>(IList<T> collection) where T : IComparable<T>

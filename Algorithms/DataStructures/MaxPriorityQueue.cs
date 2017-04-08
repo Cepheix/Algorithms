@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Algorithms.DataStructures
 {
@@ -15,6 +16,27 @@ namespace Algorithms.DataStructures
         public MaxPriorityQueue(int capacity)
         {
             this._queue = new T[capacity];
+        }
+
+        /// <summary>
+        /// Sortowanie
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        public static void HeapSort<T>(IList<T> collection) where T : IComparable<T>
+        {
+            int n = collection.Count;
+
+            for (int i = 0; i < n; i++)
+            {
+                Sink(collection, i, n);
+            }
+
+            while (n > 1)
+            {
+                Exch(collection, 1, n);
+                Sink(collection, 1, --n);
+            }
         }
 
         public void Enque(T item)
@@ -92,6 +114,37 @@ namespace Algorithms.DataStructures
             T t = _queue[i];
             _queue[i] = _queue[j];
             _queue[j] = t;
+        }
+
+        private static void Exch<T>(IList<T> collection, int i, int j) where T : IComparable<T>
+        {
+            T t = collection[i];
+            collection[i] = collection[j];
+            collection[j] = t;
+        }
+
+        private static void Sink<T>(IList<T> collection, int k, int N) where T : IComparable<T>
+        {
+            while (2 * k <= N)
+            {
+                int j = 2 * k;
+                // sprawdź czy nie koniec drzewa i czy elementy o indeksach j i j + 1 (dzieci elementu o indeksie k) są we właściwej kolejności 
+                if (j < N && (collection[j].CompareTo(collection[j + 1]) < 0))
+                {
+                    // jeśli tak to wszystko w porządku zwiększ licznik
+                    j++;
+                }
+                // sprawdź czy większe z jego dzieci jest od niego mniejsze
+                else if (collection[k].CompareTo(collection[j]) > 0)
+                {
+                    // jeśli tak to jest już we właściwym miejscu - zakończ
+                    break;
+                }
+
+                // zamień element z większym z jego dzieci
+                Exch(collection, k, j);
+                k = j;
+            }
         }
     }
 }
