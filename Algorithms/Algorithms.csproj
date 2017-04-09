@@ -45,15 +45,15 @@
     <Compile Include="Algorithms\ArrayExtension.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
-    <Compile Include="DataStructures\ArrayStack.cs" />
-    <Compile Include="DataStructures\IQueue.cs" />
-    <Compile Include="DataStructures\IStack.cs" />
-    <Compile Include="DataStructures\PointerQueue.cs" />
-    <Compile Include="DataStructures\MaxPriorityQueue.cs" />
-    <Compile Include="DataStructures\QuickUnion.cs" />
-    <Compile Include="DataStructures\PointerStack.cs" />
-    <Compile Include="DataStructures\UnionFind.cs" />
-    <Compile Include="DataStructures\WeightedQuickUnion.cs" />
+    <Compile Include="DataStructures\Stacks\ArrayStack.cs" />
+    <Compile Include="DataStructures\Queues\IQueue.cs" />
+    <Compile Include="DataStructures\Stacks\IStack.cs" />
+    <Compile Include="DataStructures\Queues\PointerQueue.cs" />
+    <Compile Include="DataStructures\Queues\MaxPriorityQueue.cs" />
+    <Compile Include="DataStructures\Union\QuickUnion.cs" />
+    <Compile Include="DataStructures\Stacks\PointerStack.cs" />
+    <Compile Include="DataStructures\Union\UnionFind.cs" />
+    <Compile Include="DataStructures\Union\WeightedQuickUnion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
