@@ -45,11 +45,14 @@
     <Compile Include="Algorithms\ArrayExtension.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
+    <Compile Include="DataStructures\KeyTables\BinarySearchTreeKeyTable.cs" />
+    <Compile Include="DataStructures\KeyTables\IKeyTable.cs" />
     <Compile Include="DataStructures\Stacks\ArrayStack.cs" />
     <Compile Include="DataStructures\Queues\IQueue.cs" />
     <Compile Include="DataStructures\Stacks\IStack.cs" />
     <Compile Include="DataStructures\Queues\PointerQueue.cs" />
     <Compile Include="DataStructures\Queues\MaxPriorityQueue.cs" />
+    <Compile Include="DataStructures\Trees\BinarySearchTree.cs" />
     <Compile Include="DataStructures\Union\QuickUnion.cs" />
     <Compile Include="DataStructures\Stacks\PointerStack.cs" />
     <Compile Include="DataStructures\Union\UnionFind.cs" />
