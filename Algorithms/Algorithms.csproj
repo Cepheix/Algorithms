@@ -45,6 +45,7 @@
     <Compile Include="Algorithms\ArrayExtension.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
+    <Compile Include="DataStructures\HashTables\HashTable.cs" />
     <Compile Include="DataStructures\KeyTables\BinarySearchTreeKeyTable.cs" />
     <Compile Include="DataStructures\KeyTables\IKeyTable.cs" />
     <Compile Include="DataStructures\Stacks\ArrayStack.cs" />
