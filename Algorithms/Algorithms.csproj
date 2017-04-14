@@ -53,6 +53,7 @@
     <Compile Include="DataStructures\Queues\PointerQueue.cs" />
     <Compile Include="DataStructures\Queues\MaxPriorityQueue.cs" />
     <Compile Include="DataStructures\Trees\BinarySearchTree.cs" />
+    <Compile Include="DataStructures\Trees\RedBlackBinarySearchTree.cs" />
     <Compile Include="DataStructures\Union\QuickUnion.cs" />
     <Compile Include="DataStructures\Stacks\PointerStack.cs" />
     <Compile Include="DataStructures\Union\UnionFind.cs" />

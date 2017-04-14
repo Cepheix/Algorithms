@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-
 namespace Algorithms.DataStructures.Trees
 {
-    public class BinarySearchTree<Key, Value> where Key : IComparable<Key>
+    public class RedBlackBinarySearchTree<Key, Value> where Key : IComparable<Key>
     {
         private Node root;
-
+        private const bool RED = true;
+        private const bool BLACK = false;
         public void Put(Key key, Value value)
         {
             root = Put(root, key, value);
@@ -16,7 +16,7 @@ namespace Algorithms.DataStructures.Trees
         {
             if (node == null)
             {
-                return new Node(key, value);
+                return new Node(key, value, RED);
             }
 
             int compare = key.CompareTo(node.key);
@@ -25,13 +25,28 @@ namespace Algorithms.DataStructures.Trees
             {
                 node.left = Put(node.left, key, value);
             }
-            else if(compare > 0)
+            else if (compare > 0)
             {
                 node.right = Put(node.right, key, value);
             }
             else
             {
                 node.value = value;
+            }
+
+            if (IsRed(node.right) && !IsRed(node.left))
+            {
+                node = RotateLeft(node);
+            }
+
+            if (IsRed(node.left) && !IsRed(node.left.left))
+            {
+                node = RotateRight(node);
+            }
+
+            if (IsRed(node.left) && IsRed(node.right))
+            {
+                FlipColors(node);
             }
 
             node.count = 1 + Size(node.left) + Size(node.right);
@@ -52,11 +67,11 @@ namespace Algorithms.DataStructures.Trees
                 {
                     x = x.left;
                 }
-                else if(compute > 0)
+                else if (compute > 0)
                 {
                     x = x.right;
                 }
-                else if(compute == 0)
+                else if (compute == 0)
                 {
                     return x.value;
                 }
@@ -194,7 +209,7 @@ namespace Algorithms.DataStructures.Trees
             else
             {
                 Node t = Floor(node.right, key);
-                if (t != null )
+                if (t != null)
                 {
                     return t;
                 }
@@ -204,7 +219,7 @@ namespace Algorithms.DataStructures.Trees
                 }
             }
             {
-                
+
             }
         }
 
@@ -226,7 +241,7 @@ namespace Algorithms.DataStructures.Trees
             {
                 return Rank(key, node.left);
             }
-            else if(compare > 0)
+            else if (compare > 0)
             {
                 return 1 + Size(node.left) + Rank(key, node.right);
             }
@@ -255,6 +270,49 @@ namespace Algorithms.DataStructures.Trees
             Inorder(node.right, queue);
         }
 
+        private Node RotateLeft(Node h)
+        {
+            // Assert(IsRed(h.right))
+            Node node = h.right;
+            h.right = node.left;
+            node.left = h;
+            node.color = h.color;
+            h.color = RED;
+            return node;
+        }
+
+        private Node RotateRight(Node h)
+        {
+            // Assert(IsRed(h.left))
+
+            Node node = h.left;
+            h.left = node.right;
+            node.right = h;
+            node.color = RED;
+            return node;
+        }
+
+        private void FlipColors(Node h)
+        {
+            // Assert(!IsRed(h))
+            // Assert(IsRed(h.left))
+            // Assert(IsRed(h.right))
+
+            h.color = RED;
+            h.left.color = BLACK;
+            h.right.color = BLACK;
+        }
+
+        private bool IsRed(Node node)
+        {
+            if (node == null)
+            {
+                return false; // null links are black
+            }
+
+            return node.color == RED;
+        }
+
         class Node
         {
             public Key key;
@@ -262,11 +320,13 @@ namespace Algorithms.DataStructures.Trees
             public Node left;
             public Node right;
             public int count;
+            public bool color; // color of parent link
 
-            public Node(Key key, Value value)
+            public Node(Key key, Value value, bool color)
             {
                 this.key = key;
                 this.value = value;
+                this.color = color;
             }
         }
     }
