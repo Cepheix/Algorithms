@@ -5,7 +5,7 @@ namespace Algorithms.DataStructures
 {
     /// <summary>
     /// Rodzaj kolejki gdzie usuwany jest zawsze największy element
-    /// Implementacja za pomocą complete binary tree
+    /// Implementacja za pomocą kopca (heap)
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class MaxPriorityQueue<T> : IQueue<T> where T : IComparable<T>
