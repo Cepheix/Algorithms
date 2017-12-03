@@ -43,10 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\ArrayExtension.cs" />
-    <Compile Include="Algorithms\GraphExtension.cs" />
+    <Compile Include="Algorithms\Graphs\BreadthFirstSearchPaths.cs" />
+    <Compile Include="Algorithms\Graphs\DepthFirstSearchPaths.cs" />
+    <Compile Include="Algorithms\Graphs\GraphExtension.cs" />
+    <Compile Include="Algorithms\Graphs\Paths.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
-    <Compile Include="DataStructures\Graphs\ConcreteGraph.cs" />
+    <Compile Include="DataStructures\Graphs\AdjacentListGraph.cs" />
+    <Compile Include="DataStructures\Graphs\Generic\ConcreteGenericGraph.cs" />
+    <Compile Include="DataStructures\Graphs\Generic\GenericGraph.cs" />
     <Compile Include="DataStructures\Graphs\Graph.cs" />
     <Compile Include="DataStructures\HashTables\HashTable.cs" />
     <Compile Include="DataStructures\KeyTables\BinarySearchTreeKeyTable.cs" />
