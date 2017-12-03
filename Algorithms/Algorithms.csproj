@@ -43,8 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\ArrayExtension.cs" />
+    <Compile Include="Algorithms\GraphExtension.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
+    <Compile Include="DataStructures\Graphs\ConcreteGraph.cs" />
+    <Compile Include="DataStructures\Graphs\Graph.cs" />
     <Compile Include="DataStructures\HashTables\HashTable.cs" />
     <Compile Include="DataStructures\KeyTables\BinarySearchTreeKeyTable.cs" />
     <Compile Include="DataStructures\KeyTables\IKeyTable.cs" />
