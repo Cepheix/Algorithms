@@ -52,9 +52,11 @@
     <Compile Include="Algorithms\Graphs\StrongConnectedComponent.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
+    <Compile Include="DataStructures\Graphs\AbstractEdge.cs" />
     <Compile Include="DataStructures\Graphs\AdjacentListDirectedGraph.cs" />
     <Compile Include="DataStructures\Graphs\AdjacentListGraph.cs" />
     <Compile Include="DataStructures\Graphs\DirectedGraph.cs" />
+    <Compile Include="DataStructures\Graphs\Edge.cs" />
     <Compile Include="DataStructures\Graphs\Generic\ConcreteGenericGraph.cs" />
     <Compile Include="DataStructures\Graphs\Generic\GenericGraph.cs" />
     <Compile Include="DataStructures\Graphs\Graph.cs" />
