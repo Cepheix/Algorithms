@@ -44,12 +44,16 @@
   <ItemGroup>
     <Compile Include="Algorithms\ArrayExtension.cs" />
     <Compile Include="Algorithms\Graphs\BreadthFirstSearchPaths.cs" />
+    <Compile Include="Algorithms\Graphs\ConnectedComponents.cs" />
+    <Compile Include="Algorithms\Graphs\DepthFirstOrder.cs" />
     <Compile Include="Algorithms\Graphs\DepthFirstSearchPaths.cs" />
     <Compile Include="Algorithms\Graphs\GraphExtension.cs" />
     <Compile Include="Algorithms\Graphs\Paths.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
+    <Compile Include="DataStructures\Graphs\AdjacentListDirectedGraph.cs" />
     <Compile Include="DataStructures\Graphs\AdjacentListGraph.cs" />
+    <Compile Include="DataStructures\Graphs\DirectedGraph.cs" />
     <Compile Include="DataStructures\Graphs\Generic\ConcreteGenericGraph.cs" />
     <Compile Include="DataStructures\Graphs\Generic\GenericGraph.cs" />
     <Compile Include="DataStructures\Graphs\Graph.cs" />
