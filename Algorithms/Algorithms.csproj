@@ -49,6 +49,7 @@
     <Compile Include="Algorithms\Graphs\DepthFirstSearchPaths.cs" />
     <Compile Include="Algorithms\Graphs\GraphExtension.cs" />
     <Compile Include="Algorithms\Graphs\Paths.cs" />
+    <Compile Include="Algorithms\Graphs\StrongConnectedComponent.cs" />
     <Compile Include="Algorithms\Others.cs" />
     <Compile Include="Algorithms\Soring.cs" />
     <Compile Include="DataStructures\Graphs\AdjacentListDirectedGraph.cs" />
